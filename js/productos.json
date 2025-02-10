@@ -1,0 +1,70 @@
+[
+    {
+        "id":1,
+        "nombre": "Latte",
+        "precio": 150,
+        "imagen": "./img/Latte.webp"
+    },
+
+    {
+        "id":2,
+        "nombre": "Capuccino",
+        "precio": 250,
+        "imagen": "./img/Cappucino.webp"
+    },
+
+    {
+        "id":3,
+        "nombre": "Espresso",
+        "precio": 100,
+        "imagen": "./img/Espresso.webp"
+    },
+
+    {
+        "id":4,
+        "nombre": "Flat White",
+        "precio": 300,
+        "imagen": "./img/FlatWhite.webp"
+    },
+
+    {
+        "id":5,
+        "nombre": "Mocha",
+        "precio": 350,
+        "imagen": "./img/Mocha.webp"
+    },
+
+    {
+        "id":6,
+        "nombre": "Caramel Macchiato ",
+        "precio": 400,
+        "imagen": "./img/CaramelMacchiato.webp"
+    },
+    {
+        "id":7,
+        "nombre": "Americano",
+        "precio": 320,
+        "imagen": "./img/Americano.webp"
+    },
+    {
+        "id":8,
+        "nombre": "CoffeFrappuccino",
+        "precio": 370,
+        "imagen": "./img/CoffeFrappuccino.webp"
+    },
+    {
+        "id":9,
+        "nombre": "EspressoFrappuccino",
+        "precio": 280,
+        "imagen": "./img/EspressoFrappuccino.webp"
+    },
+    {
+        "id":10,
+        "nombre": "MochaFrappuccino",
+        "precio": 390,
+        "imagen": "./img/MochaFrappuccino.webp"
+    }
+
+
+
+]

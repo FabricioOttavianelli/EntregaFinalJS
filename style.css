@@ -1,0 +1,220 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Arial, sans-serif;
+    background-image: url('img/Designer\ \(4\).png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(137, 121, 103, 0.8);
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    height: 5rem;
+
+}
+
+/* Logo */
+.logo {
+   margin-top: 28%;
+   width: 90px;
+}
+
+/* Menú */
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Menú en desktop */
+.menu {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Botón del carrito */
+.cart-button {
+    background: linear-gradient(135deg, #ff6600, rgb(124, 106, 84));
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 3%;
+}
+
+/* Lista de productos */
+
+#listadeproductos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.productos {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 16px;
+    
+}
+
+.productos h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: rgb(137, 121, 103, 0.8);
+}
+
+.productos p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #cc5a0eb7; /* Naranja para resaltar */
+    text-align: center;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.productos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Agregar al carrito */
+
+.agregaralcarrito {
+    background: linear-gradient(135deg, #ff6600, rgb(124, 106, 84));
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.agregaralcarrito:hover {
+    background: linear-gradient(135deg, #ff4500, rgb(124, 106, 84));
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.agregaralcarrito:active {
+    transform: scale(0.95);
+}
+
+
+/* Responsive: menú hamburguesa */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    background: rgba(34, 34, 34, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translate(-50%, -20px);
+    pointer-events: none; 
+}
+
+/* Cuando el menú está activo */
+.menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+}
+
+/* Estilo de los enlaces */
+.menu li {
+    padding: 15px 0;
+}
+
+.menu a {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo del botón hamburguesa */
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}}
+
+
