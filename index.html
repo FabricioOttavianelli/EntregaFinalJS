@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Responsive</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div><a href="index.html"><img class="logo" src="img/Designer (2).png" alt=""></a> </div>
         <nav>
-            <div class="menu-toggle" id="menu-toggle">
+            <div class="menuhamburguesa" id="menuhamburguesa">
                 ☰
             </div>
             <ul class="menu" id="menu">
@@ -19,7 +20,7 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-        <button class="cart-button">🛒</button>
+        <button id="botoncarrito">🛒</button>
     </header>
 
     <main>
@@ -27,21 +28,27 @@
         <div id="listadeproductos">
         
         </div>
+        <div id="carritocontainer" class="carritocontainer">
 
-        <div> 
-            <h2>Carrito de compras</h2>
-            <ul id="carrito"></ul>
+            <div class="carritocard"> 
+                <h2>Carrito de compras</h2>
+                <ul id="carrito"></ul>
+                <p id="total">Total: $0</p>
+                <button id="checkout">Check Out</button>
+                <button id="cerrarcarrito" class="cerrarcarrito">Cerrar</button>
+            </div>
+  
         </div>
 
-        <p id="total">Total: $0</p>
-
-        <button>Check Out</button>
+ 
     </main>
 
    
 
 
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
