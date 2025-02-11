@@ -1,14 +1,24 @@
 // Header
 
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menuhamburguesa");
-    const menu = document.getElementById("menu");
+    let menuHamburguesa = document.getElementById("menuhamburguesa");
+    let menu = document.getElementById("menu");
 
-    menuToggle.addEventListener("click", function () {
+    menuHamburguesa.addEventListener("click", function () {
         menu.classList.toggle("active");
     });
+    cargarCarrito();
 });
 
+function cargarCarrito() {
+    let carritoGuardado = localStorage.getItem("carrito");
+    if (carritoGuardado) {
+        let carritoRecuperado = JSON.parse(carritoGuardado);
+        carritoRecuperado.forEach(producto => {
+            agregarproducto(producto, false); // No mostrar Toastify al cargar
+        });
+    }
+}
 
 let totalCarrito = 0
 
@@ -59,6 +69,7 @@ fetch ("./js/productos.json")
             },
             onClick: function(){} // Callback after click
             }).showToast();
+
         let totalPrecio = document.getElementById("total")
         let itemCarrito = document.createElement("li")
         itemCarrito.textContent = `${producto.nombre} - $${producto.precio}`
@@ -70,7 +81,19 @@ fetch ("./js/productos.json")
     totalCarrito += producto.precio
     totalPrecio.textContent = `Total: $${totalCarrito}`
 
+    guardarCarrito();
+
     
+    }
+
+    function guardarCarrito() {
+        let productosEnCarrito = [];
+        document.querySelectorAll("#carrito li").forEach(item => {
+            let nombre = item.textContent.split(" - $")[0];
+            let precio = parseFloat(item.textContent.split(" - $")[1]);
+            productosEnCarrito.push({ nombre, precio });
+        });
+        localStorage.setItem("carrito", JSON.stringify(productosEnCarrito));
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -108,6 +131,8 @@ fetch ("./js/productos.json")
             carrito.removeChild(ITEM)
         }
 
+        guardarCarrito();
+
     })
     
     let checkoutButton = document.getElementById("checkout");
@@ -134,6 +159,8 @@ fetch ("./js/productos.json")
                 timer: 2000,
                 showConfirmButton: false
             });
+
+            guardarCarrito();
         } else {
             // Si cancela, no pasa nada
             Swal.fire({
@@ -144,14 +171,11 @@ fetch ("./js/productos.json")
             });
         }
     })
+
+    
 })
 
 
-
-
-
-
-   
 
 
 
