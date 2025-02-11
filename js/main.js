@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 let totalCarrito = 0
 
 
-fetch ("../js/productos.json")
+fetch ("./js/productos.json")
     .then(response => {
         if(!response.ok){
         throw new error ("problema al cargar procuctos.json")
