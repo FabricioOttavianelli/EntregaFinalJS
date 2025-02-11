@@ -211,7 +211,6 @@ nav {
 
 .swal-button-green {
     background-color: #28a745;
-
 }
 
 /* Mostrar el carrito cuando está activo */
@@ -332,6 +331,16 @@ nav {
     border: none;
     padding: 10px;
     transition: transform 0.3s ease-in-out;
-}}
+    
+}
+.productos {
+    width: 150px;
+height: 250px;}
+
+.productos img {
+    height: 5rem;
+}
+
+}
 
 
