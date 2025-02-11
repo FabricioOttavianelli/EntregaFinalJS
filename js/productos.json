@@ -48,19 +48,19 @@
     },
     {
         "id":8,
-        "nombre": "CoffeFrappuccino",
+        "nombre": "Coffe Frappuccino",
         "precio": 370,
         "imagen": "./img/CoffeFrappuccino.webp"
     },
     {
         "id":9,
-        "nombre": "EspressoFrappuccino",
+        "nombre": "Espresso Frappuccino",
         "precio": 280,
         "imagen": "./img/EspressoFrappuccino.webp"
     },
     {
         "id":10,
-        "nombre": "MochaFrappuccino",
+        "nombre": "Mocha Frappuccino",
         "precio": 390,
         "imagen": "./img/MochaFrappuccino.webp"
     }

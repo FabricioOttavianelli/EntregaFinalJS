@@ -111,8 +111,9 @@ nav {
     font-weight: bold;
     color: #cc5a0eb7; 
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     display: block;
+    
 }
 
 .productos img {
@@ -335,12 +336,29 @@ nav {
 }
 .productos {
     width: 150px;
-height: 250px;}
+height: 270px;}
 
 .productos img {
-    height: 5rem;
+    height: 7rem;
+    margin-top: 0;
+}
+.productos h3 {
+    font-size: 1rem;
 }
 
+.productos p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.agregaralcarrito {
+    background: linear-gradient(135deg, #ff6600, rgb(124, 106, 84));
+    color: white;
+    font-size: 0.8rem;
+    padding: 7px 13px;
+    border-radius: 8px;
+
+}
 }
 
 
